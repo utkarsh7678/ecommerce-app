@@ -159,6 +159,43 @@ go build -o ecommerce-app cmd/main.go
 npm run build
 # Serve the files from 'dist' using a static file server
 ```
+---
+
+## 📁 Project Structure
+
+```bash
+ecommerce-app/
+├── backend/                    # Backend server (Go)
+│   ├── cmd/
+│   │   └── server/
+│   │       └── main.go         # Server initialization
+│   ├── internal/
+│   │   ├── config/             # Configuration files
+│   │   ├── handlers/           # HTTP request handlers
+│   │   ├── middleware/         # Custom middleware
+│   │   └── models/             # Database models
+│   ├── db/
+│   │   └── migrations/         # DB schema & migration files
+│   ├── scripts/                # Utility scripts
+│   └── .env                    # Environment variables
+│
+├── frontend/                   # Frontend application (React)
+│   ├── public/                 # Static files (favicon, etc.)
+│   └── src/                    # React source files
+│       ├── assets/            # Images, fonts, etc.
+│       ├── components/        # Reusable UI components
+│       │   └── Navbar.jsx     # Navigation bar
+│       ├── contexts/          # React Contexts (state management)
+│       ├── pages/             # Page-level components
+│       │   ├── Login.jsx      # Login page
+│       │   ├── ItemsList.jsx  # Product listing
+│       │   └── ...            # Other pages
+│       ├── App.jsx            # Root component
+│       └── main.jsx           # React app entry point
+│
+├── .gitignore                 # Git ignore rules
+└── README.md                 # Project documentation
+```
 
 ---
 
